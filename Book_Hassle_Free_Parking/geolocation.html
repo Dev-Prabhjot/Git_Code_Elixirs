@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title id="sp"> Smart Parking </title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<link rel="stylesheet" href="geoStyle.css">
+<script src="geoScript.js"></script>
+</head>
+
+<body>
+
+<div class="left"> </div>
+
+<div id="out"> </div>
+
+<div id="ui">
+	<div id="upper">
+		<div id="data">	 
+			<font id="" color="White" size=5px face="Georgia" background="#3a5fcd"><center>Smart Parking</center></font>
+
+			<form>
+				<input type="text" id="userloc" class="controls" name="Your Location" placeholder="Your Location" color="white"><br>
+				<input type="text" id="dest" name="Destination" placeholder="Destination">
+			</form>
+		</div>
+		<div id="img">
+			
+		</div>
+	</div>
+
+	<div id="action">
+		<button id="bt" onclick="addList()" value="click" width="80%" height="40%" color="white"> Find parkings near me </button>
+	</div>
+
+	<div id="addList" style='overflow:scroll;overflow-x:scroll;overflow-y:scroll;' >
+		<table id="header" face="Open Sans Condensed Bold" color="#617FB9">
+		<tr >
+		<th onMouseover="this.bgColor='#EEEEEE'"onMouseout="this.bgColor='#FFFFFF'">Parking name</th>
+		<th onMouseover="this.bgColor='#EEEEEE'"onMouseout="this.bgColor='#FFFFFF'">Total capacity</th>
+		<th onMouseover="this.bgColor='#EEEEEE'"onMouseout="this.bgColor='#FFFFFF'">Vacant slots</th>
+		<th onMouseover="this.bgColor='#EEEEEE'"onMouseout="this.bgColor='#FFFFFF'">Distance</th>
+		<th onMouseover="this.bgColor='#EEEEEE'"onMouseout="this.bgColor='#FFFFFF'">Price</th>
+		</tr>
+		</table>
+		<table id="myTable" > 
+		
+		</table>
+	</div>	
+	<div id="metrics" >
+	
+	</div>
+</div>
+
+
+<div id="map">
+
+	<script async defer
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArCO9nuCd6euwouFvbZJhJMhSieBycn8Y &libraries=places&callback=initMap">
+	</script>
+
+	<div id="mapPark"> </div> 
+
+</div>
+<div id="directions" background="#000000" width="200" height="200" >
+<button id="bt1" onclick="showpanel()" >Routes and Directions</button>
+<div id="panel" style='overflow-y:scroll;'>
+
+
+</div>
+</div>
+</body>
+</html>
