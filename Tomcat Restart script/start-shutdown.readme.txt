@@ -1,0 +1,14 @@
+#Author:Prabhjot Singh
+#Version 1.00
+#Type : shell script
+# Tomcat Start-shutdown Scriptlways causing effort to double
+
+Problem: While executing test cases our testing team used to face problem of "Tomcat server crash" hence application on QA server used to get down frequently.This which eventually obstructed their work 
+always causing efforts to get double and delay in work.
+
+Solution:The following script was proposed as solution to deal with problem such that the downtime of application decreases and there is no delay in work
+
+Following script : 1. checks Server status up or down through process id and https call .
+		   2. If server is up and running then shuts it down ,cleans cache and tarts tomcat server
+		   3. If server is down then cleans cache and Start tomcat server.
+The script is called using Jenkins Polling feature after every 30min to decrease the application downtime hence triggered through jenkins build. 
